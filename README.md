@@ -32,3 +32,5 @@ log4j.appender.Appender2.layout.ConversionPattern=%-7p %d [%t] %c %x - %m%n
 ```
 
 Above is the minimal basic configuration to use postmark lib.
+
+You can find JavaDoc for this Project on http://sejpalsaurabh.github.io/postmark-api-doc/
