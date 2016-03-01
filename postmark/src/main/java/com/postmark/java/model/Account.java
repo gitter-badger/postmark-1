@@ -40,7 +40,7 @@ public class Account {
     private List<Server> serverList;
 
     @SerializedName("SenderSignatures")
-    private List<Signature> signatureList;
+    private List<SenderSignature> senderSignatureList;
 
     @SerializedName("Templates")
     private List<Template> templateList;
@@ -70,12 +70,12 @@ public class Account {
         this.serverList = serverList;
     }
 
-    public List<Signature> getSignatureList() {
-        return signatureList;
+    public List<SenderSignature> getSenderSignatureList() {
+        return senderSignatureList;
     }
 
-    public void setSignatureList(List<Signature> signatureList) {
-        this.signatureList = signatureList;
+    public void setSenderSignatureList(List<SenderSignature> senderSignatureList) {
+        this.senderSignatureList = senderSignatureList;
     }
 
     public List<Template> getTemplateList() {

@@ -109,7 +109,7 @@ public class PostmarkTagClient {
 
                 method.addHeader("Accept", "application/json");
                 method.addHeader("Content-Type", "application/json");
-                method.addHeader("X-Postmark-Server-Token", serverToken);
+                method.addHeader(ProjectConstants.POSTMARK_SERVER_STRING, serverToken);
 
                 Gson gson = gsonBuilder.create();
                 String messageContents = gson.toJson(tag);
@@ -169,7 +169,7 @@ public class PostmarkTagClient {
                         + ProjectConstants.TRIGGERS + ProjectConstants.SEPARATOR + ProjectConstants.TAGS
                         + ProjectConstants.SEPARATOR + tagTriggerId);
                 method.addHeader("Accept", "application/json");
-                method.addHeader("X-Postmark-Server-Token", serverToken);
+                method.addHeader(ProjectConstants.POSTMARK_SERVER_STRING, serverToken);
                 ResponseHandler<String> responseHandler = new BasicResponseHandler();
 
                 try {
@@ -225,7 +225,7 @@ public class PostmarkTagClient {
 
                 method.addHeader("Accept", "application/json");
                 method.addHeader("Content-Type", "application/json");
-                method.addHeader("X-Postmark-Server-Token", serverToken);
+                method.addHeader(ProjectConstants.POSTMARK_SERVER_STRING, serverToken);
 
                 Gson gson = gsonBuilder.create();
                 String messageContents = gson.toJson(tag);
@@ -287,7 +287,7 @@ public class PostmarkTagClient {
                         + ProjectConstants.SEPARATOR + tagTriggerId);
 
                 method.addHeader("Accept", "application/json");
-                method.addHeader("X-Postmark-Server-Token", serverToken);
+                method.addHeader(ProjectConstants.POSTMARK_SERVER_STRING, serverToken);
                 ResponseHandler<String> responseHandler = new BasicResponseHandler();
 
                 try {
@@ -339,7 +339,7 @@ public class PostmarkTagClient {
                             + ProjectConstants.TRIGGERS + ProjectConstants.SEPARATOR + ProjectConstants.TAGS
                             + "?match_name=" + matchName + "&" + ProjectConstants.COUNT + "=" + ProjectConstants.MAXIMUM_SERVER_COUNT + "&" + ProjectConstants.OFFSET + "=" + ProjectConstants.OFFSET_COUNT);
                     method.addHeader("Accept", "application/json");
-                    method.addHeader("X-Postmark-Server-Token", serverToken);
+                    method.addHeader(ProjectConstants.POSTMARK_SERVER_STRING, serverToken);
                     ResponseHandler<String> responseHandler = new BasicResponseHandler();
                     account = generateSearchTagTriggerResponse(responseHandler, httpClient, method);
                 }
@@ -384,7 +384,7 @@ public class PostmarkTagClient {
                         + ProjectConstants.TRIGGERS + ProjectConstants.SEPARATOR + ProjectConstants.TAGS
                         + "?" + ProjectConstants.COUNT + "=" + ProjectConstants.MAXIMUM_SERVER_COUNT + "&" + ProjectConstants.OFFSET + "=" + ProjectConstants.OFFSET_COUNT);
                 method.addHeader("Accept", "application/json");
-                method.addHeader("X-Postmark-Server-Token", serverToken);
+                method.addHeader(ProjectConstants.POSTMARK_SERVER_STRING, serverToken);
                 ResponseHandler<String> responseHandler = new BasicResponseHandler();
                 account = generateSearchTagTriggerResponse(responseHandler, httpClient, method);
             }
