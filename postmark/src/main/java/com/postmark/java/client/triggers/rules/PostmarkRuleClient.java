@@ -106,7 +106,7 @@ public class PostmarkRuleClient {
                         + ProjectConstants.TRIGGERS + ProjectConstants.SEPARATOR + ProjectConstants.INBOUND_RULES
                 + "?" + ProjectConstants.COUNT + "=" + ProjectConstants.MAXIMUM_SERVER_COUNT + "&" + ProjectConstants.OFFSET + "=" + ProjectConstants.OFFSET_COUNT);
                 method.addHeader("Accept", "application/json");
-                method.addHeader("X-Postmark-Server-Token", serverToken);
+                method.addHeader(ProjectConstants.POSTMARK_SERVER_STRING, serverToken);
                 ResponseHandler<String> responseHandler = new BasicResponseHandler();
 
                 try {
@@ -166,7 +166,7 @@ public class PostmarkRuleClient {
 
                 method.addHeader("Accept", "application/json");
                 method.addHeader("Content-Type", "application/json");
-                method.addHeader("X-Postmark-Server-Token", serverToken);
+                method.addHeader(ProjectConstants.POSTMARK_SERVER_STRING, serverToken);
 
                 Gson gson = gsonBuilder.create();
                 String messageContents = gson.toJson(rule);
@@ -226,7 +226,7 @@ public class PostmarkRuleClient {
                 HttpDelete method =   new HttpDelete(ProjectConstants.POSTMARK_ENDPOINT
                         + ProjectConstants.TRIGGERS + ProjectConstants.SEPARATOR + ProjectConstants.INBOUND_RULES + ProjectConstants.SEPARATOR + ruleId);
                 method.addHeader("Accept", "application/json");
-                method.addHeader("X-Postmark-Server-Token", serverToken);
+                method.addHeader(ProjectConstants.POSTMARK_SERVER_STRING, serverToken);
 
                 ResponseHandler<String> responseHandler = new BasicResponseHandler();
 

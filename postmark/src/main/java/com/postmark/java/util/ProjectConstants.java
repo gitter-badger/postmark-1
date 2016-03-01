@@ -59,4 +59,8 @@ public class ProjectConstants {
 
     public static final String OFFSET   =   "offset";
 
+    public static final String POSTMARK_SERVER_STRING   =   "X-Postmark-Server-Token";
+
+    public static final String POSTMARK_ACCOUNT_STRING   =   "X-Postmark-Account-Token";
+
 }

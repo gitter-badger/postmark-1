@@ -84,7 +84,7 @@ public class PostmarkServerClient {
     }
 
     public List<Server> getServers() throws PostmarkException {
-        if (PropertyLoader.isAccountTokenThere()) {
+        if (ProjectConstants.isAccountToken) {
             HttpClient httpClient = new DefaultHttpClient();
             Account account = new Account();
             try {
@@ -93,7 +93,7 @@ public class PostmarkServerClient {
 
                 // Add standard headers required by Postmark
                 method.addHeader("Accept", "application/json");
-                method.addHeader("X-Postmark-Account-Token", accountToken);
+                method.addHeader(ProjectConstants.POSTMARK_ACCOUNT_STRING, accountToken);
 
                 ResponseHandler<String> responseHandler = new BasicResponseHandler();
 
@@ -121,7 +121,7 @@ public class PostmarkServerClient {
     }
 
     public Server getServer(long serverId) throws PostmarkException {
-        if (PropertyLoader.isAccountTokenThere()) {
+        if (ProjectConstants.isAccountToken) {
             HttpClient httpClient = new DefaultHttpClient();
             Server server = new Server();
             try {
@@ -129,7 +129,7 @@ public class PostmarkServerClient {
                 HttpGet method = new HttpGet(ProjectConstants.POSTMARK_ENDPOINT + ProjectConstants.SEPARATOR + ProjectConstants.SERVERS + ProjectConstants.SEPARATOR + serverId);
                 // Add standard headers required by Postmark
                 method.addHeader("Accept", "application/json");
-                method.addHeader("X-Postmark-Account-Token", accountToken);
+                method.addHeader(ProjectConstants.POSTMARK_ACCOUNT_STRING, accountToken);
 
                 ResponseHandler<String> responseHandler = new BasicResponseHandler();
 
@@ -157,7 +157,7 @@ public class PostmarkServerClient {
     }
 
     public Server createServer(Server server) throws PostmarkException {
-        if (PropertyLoader.isAccountTokenThere()) {
+        if (ProjectConstants.isAccountToken) {
             HttpClient httpClient = new DefaultHttpClient();
             Server theResponse = new Server();
             try {
@@ -168,7 +168,7 @@ public class PostmarkServerClient {
                 // Add standard headers required by Postmark
                 method.addHeader("Accept", "application/json");
                 method.addHeader("Content-Type", "application/json; charset=utf-8");
-                method.addHeader("X-Postmark-Server-Token", accountToken);
+                method.addHeader(ProjectConstants.POSTMARK_ACCOUNT_STRING, accountToken);
 
 
                 // Convert the message into JSON content
@@ -213,7 +213,7 @@ public class PostmarkServerClient {
     public Server editServer(Server server) throws PostmarkException {
         //TODO : http://developer.postmarkapp.com/developer-api-servers.html#edit-server
 
-        if (PropertyLoader.isAccountTokenThere()) {
+        if (ProjectConstants.isAccountToken) {
             HttpClient httpClient = new DefaultHttpClient();
             Server theResponse = new Server();
             try {
@@ -224,9 +224,9 @@ public class PostmarkServerClient {
                 // Add standard headers required by Postmark
                 method.addHeader("Accept", "application/json");
                 method.addHeader("Content-Type", "application/json; charset=utf-8");
-                method.addHeader("X-Postmark-Server-Token", accountToken);
+                method.addHeader(ProjectConstants.POSTMARK_ACCOUNT_STRING, accountToken);
 
-
+                server.setServerId(0);
                 // Convert the message into JSON content
                 Gson gson = gsonBuilder.create();
                 String messageContents = gson.toJson(server);
@@ -268,7 +268,7 @@ public class PostmarkServerClient {
 
     public PostmarkResponse deleteServer(long serverId) throws PostmarkException {
 
-        if (PropertyLoader.isAccountTokenThere()) {
+        if (ProjectConstants.isAccountToken) {
             HttpClient httpClient = new DefaultHttpClient();
             PostmarkResponse postmarkResponse = new PostmarkResponse();
 
@@ -277,7 +277,7 @@ public class PostmarkServerClient {
                 // Add standard headers required by Postmark
                 method.addHeader("Accept", "application/json");
                 method.addHeader("Content-Type", "application/json; charset=utf-8");
-                method.addHeader("X-Postmark-Server-Token", accountToken);
+                method.addHeader(ProjectConstants.POSTMARK_ACCOUNT_STRING, accountToken);
 
                 ResponseHandler<String> responseHandler = new BasicResponseHandler();
 
