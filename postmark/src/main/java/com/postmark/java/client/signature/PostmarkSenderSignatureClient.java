@@ -135,7 +135,7 @@ public class PostmarkSenderSignatureClient {
 
     /**
      *
-     * This method will give you SenderSignature Object using signatureId.
+     * This method will give you SenderSignature Object using <tt>signatureId</tt>.
      *
      * <p>
      * You can check <a href="http://developer.postmarkapp.com/developer-api-signatures.html#sender-signature"
@@ -194,7 +194,7 @@ public class PostmarkSenderSignatureClient {
     /**
      *
      *  This method will allow you to create SenderSignature,
-     *  you must need to specify fromEmail and Name into It.
+     *  you must need to specify <tt>fromEmail</tt> and <tt>Name</tt> into It.
      *
      *  <p>
      * You can check <a href="http://developer.postmarkapp.com/developer-api-signatures.html#create-signature"
@@ -264,7 +264,7 @@ public class PostmarkSenderSignatureClient {
     /**
      *
      * This method will allow you to edit Sender Signature using senderSignatureId
-     * You must need to specify name and signatureId in SenderSignature Object.
+     * You must need to specify <tt>name</tt> and <tt>signatureId</tt> in SenderSignature Object.
      *
      * <p>
      * You can check <a href="http://developer.postmarkapp.com/developer-api-signatures.html#edit-signature"
@@ -334,7 +334,7 @@ public class PostmarkSenderSignatureClient {
 
     /**
      *
-     * This method will allow you to delete Sender Signature using Signature Id
+     * This method will allow you to delete Sender Signature using <tt>Signature Id</tt>
      *
      * <p>
      * You can check <a href="http://developer.postmarkapp.com/developer-api-signatures.html#delete-signature"
@@ -387,7 +387,7 @@ public class PostmarkSenderSignatureClient {
 
     /**
      *
-     * This method will allow you to resend the confirmation email using signatureId.
+     * This method will allow you to resend the confirmation email using <tt>signatureId</tt>.
      *
      * <p>
      * You can check <a href="http://developer.postmarkapp.com/developer-api-signatures.html#resend-confirmation"

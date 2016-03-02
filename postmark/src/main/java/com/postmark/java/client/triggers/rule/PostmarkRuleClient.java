@@ -20,7 +20,7 @@
 
 */
 
-package com.postmark.java.client.triggers.rules;
+package com.postmark.java.client.triggers.rule;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
