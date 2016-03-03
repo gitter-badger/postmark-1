@@ -1,5 +1,7 @@
 # Postmark Java API
 
+[![Join the chat at https://gitter.im/sejpalsaurabh/postmark](https://badges.gitter.im/sejpalsaurabh/postmark.svg)](https://gitter.im/sejpalsaurabh/postmark?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 You can browse JavaDoc for Project on [http://sejpalsaurabh.github.io/postmark-api-doc/]
 
 You need to create a file named ```postmark.properties```
